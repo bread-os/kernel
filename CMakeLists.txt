@@ -11,5 +11,7 @@ enable_language(ASM_NASM)
 include_directories(include)
 
 add_executable(${KERNEL_BIN}
-        src/main.c)
+        src/main.c
+        src/renderer.c
+        src/allocator.c)
 set_target_properties(${KERNEL_BIN} PROPERTIES LINK_FLAGS "-T ${CMAKE_SOURCE_DIR}/linker.lds -static -Bsymbolic -nostdlib -ffreestanding -nostdlib")
