@@ -15,4 +15,7 @@ typedef struct {
 static Renderer renderer;
 
 void initRenderer(FrameBuffer *framebuffer,
-                       PSF1_FONT *psf_1_font);
+                  PSF1_FONT *psf_1_font);
+
+// kernel print
+void kprint(const char *str, ...);
